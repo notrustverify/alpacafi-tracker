@@ -91,7 +91,8 @@ const handleReconnection = () => {
     // Send notification about reconnection attempt
     if (bot && chatId) {
       const reconnectMessage = `⚠️ *AlpacaFi Bot Alert*\n\nConnection to blockchain lost. Reconnection attempt ${reconnectAttempts}/${MAX_RECONNECT_ATTEMPTS} scheduled in ${cappedDelay/1000} seconds.`;
-      sendTelegramMessage(chatId, reconnectMessage);
+      //sendTelegramMessage(chatId, reconnectMessage);
+      console.log(reconnectMessage);
     }
     
     setTimeout(() => {
